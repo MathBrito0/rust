@@ -34,3 +34,26 @@ This is a **Cargo Workspace** with various exercises organized independently.
 # Error checking
 
 /*cargo check*/
+
+Na raiz do projeto (`rust`), execute:
+
+```bash
+git add .
+git commit -m "Organiza exercícios em workspace"
+git push origin main
+```
+
+Se ainda não existir um repositório remoto configurado, adicione-o antes:
+
+```bash
+git remote add origin https://github.com/MathBrito0/rust.git
+git push -u origin main
+```
+
+Para conferir se o remoto já existe:
+
+```bash
+git remote -v
+```
+
+O `git add .` adiciona as mudanças, o `git commit` cria um registro local e o `git push` envia para o GitHub.

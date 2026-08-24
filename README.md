@@ -5,7 +5,7 @@ A repository focused on learning Rust from scratch!
 # Achievements:
 
 - [🔄] Learn basic concepts;
-- [ ] Learn Rust fundamentals;
+- [🔄] Learn Rust fundamentals;
 - [ ] Ownership;
 - [ ] Borrowing;
 - [ ] Pattern Matching;
@@ -17,25 +17,34 @@ This is a **Cargo Workspace** with various exercises organized independently.
 
 (rust/
 
-├── exercise-beta/ # First program (Hello, Rust!)
+├── exercicio-beta/ # First program (Hello, Rust!)
 
-├── exercise-1/ # [Simple calculator]
+├── exercicio-1/ # [Simple calculator]
 
 └── ...)
 
-# How to run a project? 
+# Creating modules in Rust.
 
-/*cargo run -p exercise-1*/
+## 1. Create the structure via the terminal.
 
-# How to compile the project?
+The "exercicios" folder contains independent Rust projects.
+Each exercise has its own 'Cargo.toml' and its own 'main.rs'.
 
-/*cargo run -p exercise-name*/
+'''bash
+cd /workspaces/rust
+cargo new exercicios/exercicio-2
 
-# Error checking
+(Ensure the new exercise has been added to the root Cargo.toml
 
-/*cargo check*/
+["workspace"]
+members = [
+    "exercicios/exercicio-0",
+    "exercicios/exercicio-1",
+    "exercicios/exercicio-2",
+]
+resolver = "3")
 
-Na raiz do projeto (`rust`), execute:
+At the project root (`rust`), run:
 
 ```bash
 git add .
@@ -43,17 +52,24 @@ git commit -m "Organiza exercícios em workspace"
 git push origin main
 ```
 
-Se ainda não existir um repositório remoto configurado, adicione-o antes:
+If a remote repository isn't configured yet, add it first:
 
 ```bash
-git remote add origin https://github.com/MathBrito0/rust.git
+git remote add origin https://github.com/account-name/rust.git
 git push -u origin main
 ```
 
-Para conferir se o remoto já existe:
-
+To check if the remote already exists: 
 ```bash
 git remote -v
 ```
 
-O `git add .` adiciona as mudanças, o `git commit` cria um registro local e o `git push` envia para o GitHub.
+`git add .` stages the changes, `git commit` creates a local record and `git push` sends it to GitHub.
+
+# How to run and compile a project? 
+
+/*cargo run -p exercise-1*/
+
+# Error checking
+
+/*cargo check*/

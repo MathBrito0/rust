@@ -1,4 +1,3 @@
 [workspace]
-members = ["exercicio-1","exercicio-beta"]
+members = ["exercicios/exercicio-1","exercicios/exercicio-beta"]
 resolver = "3"
-

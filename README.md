@@ -1,36 +1,36 @@
-# Estudo de Rust
+# Rust Study
 
-Repositório focado em estudar Rust desde o princípio!
+A repository focused on learning Rust from scratch!
 
-# Objetivos:
+# Achievements:
 
-- [🔄] Aprender conceitos básicos;
-- [ ] Aprender fundamentos da linguagem;
+- [🔄] Learn basic concepts;
+- [ ] Learn Rust fundamentals;
 - [ ] Ownership;
 - [ ] Borrowing;
 - [ ] Pattern Matching;
 
 
-# Modo de Estruturação:
+# Structure:
 
-Este é um **Cargo Workspace** com vários exercícios separados de forma independente.
+This is a **Cargo Workspace** with various exercises organized independently.
 
 (rust/
 
-├── exercicio-beta/ # Primeiro programa (Olá, Rust!)
+├── exercise-beta/ # First program (Hello, Rust!)
 
-├── exercicio-1/ # [Calculadora simples]
+├── exercise-1/ # [Simple calculator]
 
 └── ...)
 
-# Como rodar um projeto? 
+# How to run a project? 
 
-/*cargo run -p exercicio-1*/
+/*cargo run -p exercise-1*/
 
-# Como compilar o projeto?
+# How to compile the project?
 
-/*cargo run -p nome-do-exercicio*/
+/*cargo run -p exercise-name*/
 
-# verificação de erro 
+# Error checking
 
 /*cargo check*/

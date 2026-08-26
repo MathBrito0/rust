@@ -1,0 +1,13 @@
+{
+    "github.copilot.enable": {
+        "*": false,
+        "rust": false
+    },
+    "github.copilot.editor.enableAutoCompletions": false,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "editor.inlineSuggest.enabled": false,
+
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.autoSurround": "languageDefined"
+}

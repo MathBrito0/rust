@@ -9,10 +9,11 @@
  */
 
 
-
 use std::io;
 
- fn main() {
+mod calculadora;
+
+fn main() {
     let mut buffer = String::new();
     println!("Digite o primeiro número: ");
     io::stdin().read_line(&mut buffer).unwrap();

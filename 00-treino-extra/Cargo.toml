@@ -1,0 +1,8 @@
+@"
+[package]
+name = "treino-extra"
+version = "1.97.1"
+edition = "2024"
+
+[dependencies]
+"@ | Out-File -Encoding UTF8 treino-extra/Cargo.toml

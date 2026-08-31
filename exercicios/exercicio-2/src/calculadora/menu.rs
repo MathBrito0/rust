@@ -3,53 +3,44 @@ use super::operacoes;
 
 pub fn exibir_menu() {
     loop {
-        println!("\n=== Calculadora ===");
-        println!("1 - Soma");
-        println!("2 - Substração");
-        println!("3 - Multiplicação");
-        println!("4 - Divisão");
-        println!("5 - Sair");
-        println!("Escolha uma opção: ");
+        let mut buffer = String::new();
+        println!("Digite o primeiro número (ou 'sair' para encerrar): ");
+        io::stdin().read_line(&mut buffer).unwrap();
+        let buffer = buffer.trim();
 
-        let mut opcao = String::new();
-        io::stdin().read_line(&mut opcao).expect("Erro ao ler a opção");
-
-        let opcao: u32 = match opcao.trim().parse() {
-            Ok(num) => num,
-            Err(_) => {
-                println!("Opção inválida!");
-                continue;
-            }
-        };
-        
-        if opcao == 5 {
-            println!("Saindo...");
+        if buffer == "sair" {
+            println!("Encerrando...");
             break;
         }
 
-        if opcao < 1 || opcao > 4 {
-            println!("Opção inválida!");
-            continue;
+        let valor1: i32 = buffer.parse().expect("Erro!");
+        println!("O primeiro número foi = {valor1}");
+
+        let mut buffer2 = String::new();
+        println!("Digite o segundo número: ");
+        io::stdin().read_line(&mut buffer2).unwrap();
+        let valor2: i32 = buffer2.trim().parse().expect("Erro!");
+        println!("O segundo número foi = {valor2}");
+
+        let mut buffer3 = String::new();
+        println!("Digite a operação desejada (+, -, x, /): ");
+        io::stdin().read_line(&mut buffer3).unwrap();
+        let buffer3 = buffer3.trim();
+
+        if buffer3 == "+" {
+            let resultado = operacoes::soma(valor1, valor2);
+            println!("O valor da soma é --> {resultado}");
+        } else if buffer3 == "-" {
+            let resultado = operacoes::subtracao(valor1, valor2);
+            println!("O valor da subtração é --> {resultado}");
+        } else if buffer3 == "x" {
+            let resultado = operacoes::multiplicacao(valor1, valor2);
+            println!("O valor do produto é --> {resultado}");
+        } else if buffer3 == "/" {
+            let resultado = operacoes::divisao(valor1, valor2);
+            println!("O valor da divisão é --> {resultado}");
+        } else {
+            println!("Erro no cálculo!");
         }
-
-        let a = ler_numero("Digite o primeiro número: ");
-        let b = ler_numero("Digite o segundo número: ");
-
-        let resultado = match opcao {
-            1 => operacoes::soma(a, b),
-            2 => operacoes::subtracao(a, b),
-            3 => operacoes::multiplicacao(a, b),
-            4 => operacoes::divisao(a, b),
-            _ => unreachable!(),
-        };
-
-        println!("Resultado: {}", resultado);
-    }    
-
-fn ler_numero(mensagem: &str) -> i32 {
-    println!("{}", mensagem);
-    let mut entrada = String::new();
-    io::stdin().read_line(&mut entrada).expect("Erro ao ler o número!");
-    entrada.trim().parse().expect("Digite um número inteiro válido.")
     }
 }

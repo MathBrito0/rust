@@ -68,8 +68,12 @@ git remote -v
 
 # How to run and compile a project? 
 
-/*cargo run -p exercise-1*/
+```bash
+cargo run -p exercise-1
+```
 
 # Error checking
 
-/*cargo check*/
+```bash
+cargo check
+```

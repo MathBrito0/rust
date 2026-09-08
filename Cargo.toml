@@ -1,8 +1,3 @@
 [workspace]
-<<<<<<< HEAD
-members = ["exercicios/exercicio-0","exercicios/exercicio-1", "exercicios/exercicio-2", "exercicios/exercicio-3"]
-resolver = "3"
-=======
 members = ["exercicios/*"]
 resolver = "3"
->>>>>>> 3389fc3e942fcdbde6c6ff812aaf48e347bcb8ab
